@@ -1,26 +1,26 @@
-node ('master')
+//node ('master')
  {
   
-  def mavenHome = tool name: "maven3.6.3"
+ // def mavenHome = tool name: "maven3.6.3"
   
-      echo "GitHub BranhName ${env.BRANCH_NAME}"
-      echo "Jenkins Job Number ${env.BUILD_NUMBER}"
-      echo "Jenkins Node Name ${env.NODE_NAME}"
+      //echo "GitHub BranhName ${env.BRANCH_NAME}"
+      //echo "Jenkins Job Number ${env.BUILD_NUMBER}"
+      //echo "Jenkins Node Name ${env.NODE_NAME}"
   
-      echo "Jenkins Home ${env.JENKINS_HOME}"
-      echo "Jenkins URL ${env.JENKINS_URL}"
-      echo "JOB Name ${env.JOB_NAME}"
+      //echo "Jenkins Home ${env.JENKINS_HOME}"
+      //echo "Jenkins URL ${env.JENKINS_URL}"
+      //echo "JOB Name ${env.JOB_NAME}"
   
    //properties([[$class: 'JiraProjectProperty'], buildDiscarder(logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '2', daysToKeepStr: '', numToKeepStr: '2')), pipelineTriggers([pollSCM('* * * * *')])])
   
-  stage("CheckOutCodeGit")
+  //stage("CheckOutCodeGit")
   {
-   git branch: 'master', credentialsId: '65fb834f-a83b-4fe7-8e11-686245c47a65', url: 'https://github.com/MithunTechnologiesDevOps/maven-web-application.git'
+   //git branch: 'master', credentialsId: '65fb834f-a83b-4fe7-8e11-686245c47a65', url: 'https://github.com/MithunTechnologiesDevOps/maven-web-application.git'
  }
  
- stage("Build")
+ //stage("Build")
  {
- sh "${mavenHome}/bin/mvn clean package"
+ //sh "${mavenHome}/bin/mvn clean package"
  }
  
   /*
